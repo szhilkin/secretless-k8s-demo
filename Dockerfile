@@ -34,12 +34,12 @@ RUN cd /root && \
     sed -i '/stop/d' 02_app_developer_steps
 
 # Install kubectl
-RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl && \
+RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.19.2/bin/linux/amd64/kubectl && \
     chmod +x ./kubectl && \
     mv ./kubectl /usr/local/bin/kubectl
 
 # Install Kubernetes in Docker (kind)
-RUN curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64 && \
+RUN curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.9.0/kind-linux-amd64 && \
     chmod +x ./kind && \
     mv ./kind /usr/local/bin/kind
 
