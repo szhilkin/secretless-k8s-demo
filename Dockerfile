@@ -50,7 +50,7 @@ RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master
 
 # Install Grafana helm charts
 RUN cd /root && \
-    git clone https://github.com/pivotal-cf/charts-grafana
+    git clone https://github.com/grafana/helm2-grafana
 
 COPY secretless_demo_runner /
 COPY kind.yml scripts/ /root/
